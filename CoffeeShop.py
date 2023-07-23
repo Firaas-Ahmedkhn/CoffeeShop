@@ -71,7 +71,7 @@ def process_coins():
 
 
 def transaction(money_recieved, drink_cost):
-    '''Return True when oayment is successful, False if money is insufficient. '''
+    '''Return True when payment is successful, False if money is insufficient. '''
     if money_recieved >= drink_cost:
         change = round(money_recieved - drink_cost, 2)  # using round function to a given precision in decimal digits
         speak(f"Here is Rupees {change} in change.")
@@ -87,7 +87,7 @@ def transaction(money_recieved, drink_cost):
 
 
 def make_coffee(drink_name, order_ingredients):
-    '''Detuct the required ingredients from teh resources.'''
+    '''Detuct the required ingredients from the resources.'''
     for item in order_ingredients:
         resources[item] -= order_ingredients[item]
     speak(f"Here is your {drink_name}. Thank you. Visit again." )
